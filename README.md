@@ -15,3 +15,8 @@ images = bsObj.findAll("img",{"src":re.compile("\.\.\/img\/gifts/img.*\.jpg")})
 with open('some_url.txt','w') as f:
     for image in images:
         f.write(image["src"]+'\n')
+
+lambda匿名函数的作用：
+  如果你觉得用正则表达式来检索信息是一件很难想的事情，那么采用lambda匿名函数也是个不错的选择，编程就像写书，一个句子这么写可以表达出来的意思，换一种写法也一定可以。
+    例子：soup.findall(lambda tag : len(tag.attrs) == 2)
+    注意lambda函数的参数必须是tag， 返回值必须是布尔值，或者是一个表达式，但该表达式的值也必须是布尔值。
